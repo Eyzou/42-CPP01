@@ -24,7 +24,9 @@ int main(void)
         std::cout << "Please add a level for Harl comments:" << std::endl;
 		std::cout << "DEBUG or INFO or WARNING or ERROR"  << std::endl;
 		std::cout << "if you want to quit enter exit."  << std::endl;
-        std::cin >> input;
+    	getline(std::cin, input);
+    	if(!std::cin.good())
+    		return (1);
         harl.complain(input);
     }
       while (input.compare("exit") != 0);

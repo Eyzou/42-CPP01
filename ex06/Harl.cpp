@@ -14,11 +14,11 @@
 
 Harl::Harl()
 {
-};
+}
 
 Harl::~Harl()
 {
-};
+}
 
 void Harl::debug(void)
 {
@@ -39,6 +39,7 @@ void Harl::error(void)
 {
     std::cout << "[ERROR]\nThis is unacceptable! I want to speak to the manager now" << std::endl;
 }
+
 int convertLevelToInt (const std::string& level)
 {
 	if(level == "DEBUG")
@@ -54,6 +55,7 @@ int convertLevelToInt (const std::string& level)
 	return(-1);
 
 }
+
 void Harl::complain(std::string level)
 {
     void (Harl::*funcPtrs[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
@@ -62,13 +64,17 @@ void Harl::complain(std::string level)
 	switch(convertLevelToInt(level))
 	{
 		case 0:
-		(this->*funcPtrs[0])();
+			(this->*funcPtrs[0])();
+			// fall through
 		case 1:
-		(this->*funcPtrs[1])();
+			(this->*funcPtrs[1])();
+		// fall through
 		case 2:
-		(this->*funcPtrs[2])();
+			(this->*funcPtrs[2])();
+		// fall through
 		case 3:
-		(this->*funcPtrs[3])();
+			(this->*funcPtrs[3])();
+		// fall through
 		case 4:
 			break;
 		default:

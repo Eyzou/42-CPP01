@@ -8,12 +8,12 @@
 
 HumanB::HumanB(std::string name) : m_name(name) ,m_weapon(NULL)
 {
-};
+}
 
 HumanB::~HumanB()
 {
 
-};
+}
 
 void HumanB::attack()
 {
@@ -21,9 +21,9 @@ void HumanB::attack()
         std::cout << m_name << " attacks with their " << m_weapon->getType() << std::endl;
     else
         std::cout << m_name << "cannot attack as has no weapon " << m_weapon->getType() << std::endl;
-};
+}
 
 void HumanB::setWeapon(Weapon& weapon)
 {
     this->m_weapon = &weapon;
-};
+}

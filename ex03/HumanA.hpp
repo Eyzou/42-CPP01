@@ -3,7 +3,7 @@
 //
 
 #ifndef HUMANA_HPP
-#define HUMANA_HPP
+# define HUMANA_HPP
 
 #include "Weapon.hpp"
 #include <iostream>
@@ -24,4 +24,5 @@ class HumanA
         Weapon& m_weapon;
 
 };
+
 #endif //HUMANA_HPP

@@ -1,6 +1,3 @@
-//
-// Created by eyza on 01/07/24.
-//
 
 #include "Harl.h"
 
@@ -41,6 +38,6 @@ void Harl::complain(std::string level)
     {
         if (level == complains[i])
             (this->*funcPtrs[i])();
-        }
     }
 }
+

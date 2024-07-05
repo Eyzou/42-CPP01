@@ -16,10 +16,8 @@ int main(void)
 {
 	int N = 8;
 	std::cout << "Be ready for the Horde of Zombies . . ." << std::endl;
-	Zombie **horde = zombieHorde(N,"no name");
+	Zombie *horde = zombieHorde(N,"no name");
 	for(int i = 0; i < N; i++)
-		horde[i]->announce();
-	for(int i = 0; i < N ; i++)
-		delete horde[i];
+		horde[i].announce();
 	delete[] horde;
 }
